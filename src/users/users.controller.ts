@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   HttpStatus,
@@ -30,5 +31,10 @@ export class UsersController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() body) {
     return `This action updates #${id} user`;
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return `This action removes #${id} user`;
   }
 }
