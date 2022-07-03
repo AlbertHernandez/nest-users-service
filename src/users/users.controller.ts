@@ -8,13 +8,15 @@ import {
   Param,
   Patch,
   Post,
+  Query,
 } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
   @Get()
-  findAll() {
-    return 'Hello world';
+  findAll(@Query() paginationQuery) {
+    const { limit, offset } = paginationQuery;
+    return `This action returns all users. Limit ${limit}, offset: ${offset}`;
   }
 
   @Get(':id')
