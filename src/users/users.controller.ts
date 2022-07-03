@@ -11,4 +11,9 @@ export class UsersController {
   findOne(@Param('id') id: string) {
     return `This action returns #${id} user`;
   }
+
+  @Post()
+  create(@Body() body) {
+    return body;
+  }
 }
