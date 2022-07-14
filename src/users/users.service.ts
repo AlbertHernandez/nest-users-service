@@ -8,7 +8,7 @@ export class UsersService {
       id: '1',
       name: 'Albert',
       age: 12,
-      favoriteColors: ['blue', 'red'],
+      favoriteColors: ['blue', 'red', 'hello'],
     },
   ];
 
